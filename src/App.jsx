@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 
 const SECTIONS = ["About", "Tracks", "Prizes", "Timeline", "Partners"];
 const CONTACT_EMAIL = "eugene.shcherbinin@bloomsburytech.com";
+const LUMA_URL = "https://luma.com/fh9r1iyb";
 
 function Reveal({ children, delay = 0 }) {
   const ref = useRef(null);
@@ -422,7 +423,7 @@ export default function Site() {
             </div>
           </div>
           <div className="hero-actions">
-            <a href={`mailto:${CONTACT_EMAIL}`} className="hero-email">{CONTACT_EMAIL}</a>
+            <a href={LUMA_URL} target="_blank" rel="noopener noreferrer" className="btn-p">Register on Luma</a>
             <button className="btn-o" onClick={() => go("about")}>Learn More</button>
           </div>
         </section>
@@ -646,14 +647,14 @@ export default function Site() {
           <Reveal delay={120}>
             <div className="ptg">
               <div className="pt">
-                <div className="pt-role">Technical Partner</div>
-                <div className="pt-name">Bloomsbury Technology</div>
-                <div className="pt-desc">AI research and ML engineering. Technical track design and mentorship.</div>
+                <div className="pt-role">Co-Organiser — Bloomsbury Technology</div>
+                <div className="pt-name">Eugene Shcherbinin</div>
+                <div className="pt-desc">AI research and ML engineering. Technical track design and mentorship. <a href="mailto:eugene.shcherbinin@bloomsburytech.com" style={{borderBottom: "1px solid var(--border-hover)", paddingBottom: 1}}>eugene.shcherbinin@bloomsburytech.com</a></div>
               </div>
               <div className="pt">
-                <div className="pt-role">Impact Partner</div>
-                <div className="pt-name">Abelar</div>
-                <div className="pt-desc">Hackathon operations, impact analysis, essay commissioning, and voluntary missions.</div>
+                <div className="pt-role">Co-Organiser — Abelar</div>
+                <div className="pt-name">Cesare Adeniyi-Martins</div>
+                <div className="pt-desc">Hackathon operations, impact analysis, essay commissioning, and voluntary missions. <a href="mailto:Cesare@abelar.org" style={{borderBottom: "1px solid var(--border-hover)", paddingBottom: 1}}>Cesare@abelar.org</a></div>
               </div>
             </div>
           </Reveal>
@@ -676,7 +677,8 @@ export default function Site() {
         <section className="cta" id="register">
           <h2 className="cta-t">Join the Build.</h2>
           <p className="cta-s">Hack in London. Join on Discord. Or host a node in your city. Pick your track. Ship one system.</p>
-          <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
+            <a href={LUMA_URL} target="_blank" rel="noopener noreferrer" className="btn-p">Register on Luma</a>
             <a href={`mailto:${CONTACT_EMAIL}`} className="hero-email">{CONTACT_EMAIL}</a>
           </div>
         </section>
